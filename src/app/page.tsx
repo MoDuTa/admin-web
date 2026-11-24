@@ -96,48 +96,48 @@ const recentVisits = [
 
 export default function DashboardPage() {
   return (
-    <div className="space-y-6">
-      {/* 상단 페이지 헤더 & 액션 */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900">대시보드</h1>
-          <p className="text-sm text-slate-500 mt-1">
-            기관별 출입 정책, 방문 예약 및 출입증 발급 현황을 한눈에 확인합니다.
-          </p>
+      <div className="space-y-6">
+        {/* 상단 페이지 헤더 & 액션 */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+              <h1 className="text-2xl font-bold tracking-tight text-slate-900">대시보드</h1>
+              <p className="text-sm text-slate-500 mt-1">
+                기관별 출입 정책, 방문 예약 및 출입증 발급 현황을 한눈에 확인합니다.
+              </p>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" className="text-xs">
+              <RefreshCw className="w-3.5 h-3.5 mr-1.5 text-slate-500" />
+              새로고침
+            </Button>
+            <Button size="sm" className="text-xs">
+              <Plus className="w-3.5 h-3.5 mr-1.5" />
+              방문 예약 등록
+            </Button>
+          </div>
         </div>
 
-        <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" className="text-xs">
-            <RefreshCw className="w-3.5 h-3.5 mr-1.5 text-slate-500" />
-            새로고침
-          </Button>
-          <Button size="sm" className="text-xs">
-            <Plus className="w-3.5 h-3.5 mr-1.5" />
-            방문 예약 등록
-          </Button>
-        </div>
-      </div>
-
-      {/* 요약 통계 카드 그리드 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {summaryStats.map((stat) => {
-          const Icon = stat.icon;
-          return (
-            <Card key={stat.title} className={stat.highlight ? "border-amber-300 bg-amber-50/20" : ""}>
-              <CardHeader className="flex flex-row items-center justify-between pb-2">
-                <CardTitle className="text-sm font-medium text-slate-600">
-                  {stat.title}
-                </CardTitle>
-                <Icon className={`w-4 h-4 ${stat.highlight ? "text-amber-500" : "text-slate-400"}`} />
-              </CardHeader>
-              <CardContent>
-                <div className="text-2xl font-bold text-slate-900">{stat.value}</div>
-                <p className="text-xs text-slate-500 mt-1">{stat.desc}</p>
-              </CardContent>
-            </Card>
-          );
+            {/* 요약 통계 카드 그리드 */ }
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {summaryStats.map((stat) => {
+                const Icon = stat.icon;
+                return (
+                    <Card key={stat.title} className={stat.highlight ? "border-amber-300 bg-amber-50/20" : ""}>
+                      <CardHeader className="flex flex-row items-center justify-between pb-2">
+                          <CardTitle className="text-sm font-medium text-slate-600">
+                            {stat.title}
+                          </CardTitle>
+                          <Icon className={`w-4 h-4 ${stat.highlight ? "text-amber-500" : "text-slate-400"}`} />
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-2xl font-bold text-slate-900">{stat.value}</div>
+                        <p className="text-xs text-slate-500 mt-1">{stat.desc}</p>
+                      </CardContent>
+                    </Card>
+                    );
         })}
-      </div>
+                  </div>
 
       {/* 2단 분할 콘텐츠 영역 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -200,51 +200,51 @@ export default function DashboardPage() {
                 ))}
               </TableBody>
             </Table>
-          </CardContent>
-        </Card>
+                  </CardContent>
+                </Card>
 
-        {/* 우측 1열: 빠른 작업 & 시스템 현황 */}
-        <div className="space-y-6">
-          {/* 빠른 작업 */}
-          <Card>
-            <CardHeader className="pb-3">
-              <CardTitle className="text-base font-semibold text-slate-900">
-                빠른 작업
-              </CardTitle>
-              <CardDescription className="text-xs text-slate-500">
-                자주 사용하는 관리 기능입니다.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-2 pt-0">
-              <Button variant="outline" className="w-full justify-start text-xs h-9" size="sm">
-                <Building2 className="w-4 h-4 mr-2 text-slate-500" />
-                신규 기관 등록
-              </Button>
-              <Button variant="outline" className="w-full justify-start text-xs h-9" size="sm">
-                <CreditCard className="w-4 h-4 mr-2 text-slate-500" />
-                일일 출입증(QR) 수동 발급
-              </Button>
-              <Button variant="outline" className="w-full justify-start text-xs h-9" size="sm">
-                <ShieldCheck className="w-4 h-4 mr-2 text-slate-500" />
-                보안구역 출입 정책 설정
-              </Button>
-            </CardContent>
-          </Card>
+                {/* 우측 1열: 빠른 작업 & 시스템 현황 */ }
+                <div className="space-y-6">
+                  {/* 빠른 작업 */}
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-base font-semibold text-slate-900">
+                        빠른 작업
+                      </CardTitle>
+                      <CardDescription className="text-xs text-slate-500">
+                        자주 사용하는 관리 기능입니다.
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-2 pt-0">
+                      <Button variant="outline" className="w-full justify-start text-xs h-9" size="sm">
+                        <Building2 className="w-4 h-4 mr-2 text-slate-500" />
+                        신규 기관 등록
+                      </Button>
+                      <Button variant="outline" className="w-full justify-start text-xs h-9" size="sm">
+                        <CreditCard className="w-4 h-4 mr-2 text-slate-500" />
+                        일일 출입증(QR) 수동 발급
+                      </Button>
+                      <Button variant="outline" className="w-full justify-start text-xs h-9" size="sm">
+                        <ShieldCheck className="w-4 h-4 mr-2 text-slate-500" />
+                        보안구역 출입 정책 설정
+                      </Button>
+                    </CardContent>
+                  </Card>
 
-          {/* 시스템 안내 */}
-          <Card className="bg-slate-50/80 border-slate-200">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-semibold text-slate-800">
-                안내 사항
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="text-xs text-slate-500 space-y-1.5 pt-0">
-              <p>• 출입증 발급 시 1인 1QR 정책이 기본 적용됩니다.</p>
-              <p>• 긴급 점검 시간: 매주 수요일 02:00 ~ 03:00</p>
-            </CardContent>
-          </Card>
-        </div>
+                  {/* 시스템 안내 */}
+                  <Card className="bg-slate-50/80 border-slate-200">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-semibold text-slate-800">
+                        안내 사항
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-xs text-slate-500 space-y-1.5 pt-0">
+                      <p>• 출입증 발급 시 1인 1QR 정책이 기본 적용됩니다.</p>
+                      <p>• 긴급 점검 시간: 매주 수요일 02:00 ~ 03:00</p>
+                    </CardContent>
+                  </Card>
+                </div>
       </div>
     </div>
-  );
+        );
 }
