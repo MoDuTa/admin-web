@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { AdminLayout } from "@/components/layout/admin-layout";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "공공 관리자 시스템 | admin-web",
-  description: "기관 등록, 출입 정책, 예약 및 출입증 관리 시스템",
+  title: "공공 관리자 웹 | Admin",
+  description: "기관 등록, 출입 정책, 예약 및 출입증 관리",
 };
 
 export default function RootLayout({
@@ -26,9 +25,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen text-foreground bg-background`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-slate-50/60 text-slate-900`}
       >
-        <AdminLayout>{children}</AdminLayout>
+        {children}
       </body>
     </html>
   );

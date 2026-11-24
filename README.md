@@ -24,17 +24,11 @@
 admin-web/
 ├── public/                 # 정적 리소스 (로고, 아이콘 등)
 ├── src/
-│   ├── app/                # Next.js App Router 페이지 및 레이아웃
-│   │   ├── institutions/   # 기관 관리
-│   │   ├── passes/         # 출입증 관리
-│   │   ├── policies/       # 출입 정책 관리
-│   │   ├── reservations/   # 방문 예약 관리
-│   │   ├── settings/       # 시스템 설정
+│   ├── app/                # Next.js App Router
 │   │   ├── globals.css     # 전역 스타일 및 Tailwind 테마 변수
 │   │   ├── layout.tsx      # 루트 레이아웃
-│   │   └── page.tsx        # 대시보드 메인
-│   ├── components/         # 컴포넌트 모음
-│   │   ├── layout/         # 관리자 레이아웃 (Sidebar, Header 등)
+│   │   └── page.tsx        # 통합 관리 대시보드 (단일 페이지)
+│   ├── components/
 │   │   └── ui/             # shadcn/ui 기반 원자적 UI 컴포넌트
 │   └── lib/                # 유틸리티 함수 (cn 등)
 ├── components.json         # shadcn/ui 설정
@@ -80,4 +74,4 @@ npm run lint
   - 예시: `feat/0.1.0-init-project`, `feat/2.3.1-qr-validation`
   - 허용 접두사: `feat`, `fix`, `infra`, `docs`, `test`, `refactor`, `chore`, `style`
 - **PR 제목 형식**: `[<wbs>] <작업 내용 요약>`
-  - 예시: `[0.1.0] Next.js 15, Tailwind CSS, shadcn/ui 기반 프로젝트 초기 환경 구축`
+  - 예시: `[0.1.0] Next.js 15, Tailwind CSS, shadcn/ui 기반 프로젝트 초기 셋업`
