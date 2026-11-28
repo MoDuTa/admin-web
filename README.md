@@ -2,7 +2,7 @@
 
 관리자 웹 · 기관 등록, 출입 정책, 예약 및 출입증 관리 시스템
 
-공통 이슈·브랜치·커밋·PR 규칙은 [협업 가이드](https://github.com/gonggongpublic/.github/blob/main/CONTRIBUTING.md)를 참고하세요.
+공통 이슈·브랜치·커밋·PR 규칙은 [협업 가이드](https://github.com/MoDuTa/.github/blob/main/CONTRIBUTING.md)를 참고하세요.
 
 ---
 
@@ -75,3 +75,9 @@ npm run lint
   - 허용 접두사: `feat`, `fix`, `infra`, `docs`, `test`, `refactor`, `chore`, `style`
 - **PR 제목 형식**: `[<wbs>] <작업 내용 요약>`
   - 예시: `[0.1.0] Next.js 15, Tailwind CSS, shadcn/ui 기반 프로젝트 초기 셋업`
+
+## 협업과 검증
+
+[공통 협업 규칙](https://github.com/MoDuTa/.github/blob/main/CONTRIBUTING.md)을 따릅니다
+
+PR 제목은 `feat: 대여 기능 추가`처럼 작성하며 WBS 번호와 작업 중 커밋 형식을 강제하지 않습니다
