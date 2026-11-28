@@ -1,8 +1,8 @@
 # admin-web
 
-관리자 웹 · 기관 등록, 출입 정책, 예약 및 출입증 관리 시스템
+모두타 공공자전거 서비스 관리자 웹
 
-공통 이슈·브랜치·커밋·PR 규칙은 [협업 가이드](https://github.com/gonggongpublic/.github/blob/main/CONTRIBUTING.md)를 참고하세요.
+공통 이슈·브랜치·커밋·PR 규칙은 [협업 가이드](https://github.com/MoDuTa/.github/blob/0f73a1af1716771f4b8ea62055ce777ae361db1b/CONTRIBUTING.md)를 참고하세요.
 
 ---
 
@@ -65,13 +65,17 @@ npm run lint
 
 ---
 
-## 🌿 브랜치 및 PR 규칙
+## 협업과 검증
 
-저장소의 CI (`.github/workflows/pr-rules.yml`) 규칙을 준수합니다.
+이 변경의 기준은 [공통 협업 규칙 개정본](https://github.com/MoDuTa/.github/blob/0f73a1af1716771f4b8ea62055ce777ae361db1b/CONTRIBUTING.md)입니다
 
-- **기본 브랜치**: `develop`
-- **브랜치 형식**: `<type>/<wbs>-<feature-name>`
-  - 예시: `feat/0.1.0-init-project`, `feat/2.3.1-qr-validation`
-  - 허용 접두사: `feat`, `fix`, `infra`, `docs`, `test`, `refactor`, `chore`, `style`
-- **PR 제목 형식**: `[<wbs>] <작업 내용 요약>`
-  - 예시: `[0.1.0] Next.js 15, Tailwind CSS, shadcn/ui 기반 프로젝트 초기 셋업`
+- 작업 브랜치 예시: `feat/rental`, `fix/12-return-status`. WBS 번호는 필수가 아닙니다
+- PR 제목 예시: `feat: 대여 기능 추가`, `fix(auth): 만료 처리 수정`
+- 작업 중 커밋 메시지는 강제 검사하지 않으며, Squash 최종 커밋에는 PR 제목을 사용합니다
+- 이슈는 PR 본문에서 연결하고, WBS·Jira 링크는 필요한 경우 참고 정보로 적습니다
+
+### 규칙 전환 순서
+
+[공통 규칙 PR #1](https://github.com/MoDuTa/.github/pull/1)을 먼저 승인·머지한 다음 이 저장소의 전환 PR을 반영합니다
+
+공통 문서가 아직 머지되지 않은 검토 단계에서도 위 개정본을 기준으로 합니다. 기존 공통 문서의 WBS 필수·대괄호 PR 제목·중간 커밋 형식 강제 안내 대신, 이 절의 새 규칙을 적용합니다. 전환 PR이 반영되지 않은 다른 브랜치의 검사는 자동으로 바뀌지 않습니다
